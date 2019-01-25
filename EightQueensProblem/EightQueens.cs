@@ -12,14 +12,18 @@ namespace EightQueensProblem
         private List<List<Point>> solutions;
         private List<Point> qeens_positioned;
 
-        public EightQueens()
-        {
-            solutions = new List<List<Point>>();
-            qeens_positioned = new List<Point>();
-        }
+        public EightQueens() => solutions = new List<List<Point>>();
 
         public List<List<Point>> Solutions() { return new List<List<Point>>(); }
 
+        private List<Point> GetSolutionForPoint(Point new_point)
+        {
+            qeens_positioned = new List<Point>();
+            qeens_positioned.Add(new_point);
+            if (SolutionProblem(new_point, 1))
+                return qeens_positioned;
+            else return new List<Point>();
+        }
         // Поиск решения алгоритмом с возвратом
         private bool SolutionProblem(Point new_qeen, int num_qeens_positioned)
         {
