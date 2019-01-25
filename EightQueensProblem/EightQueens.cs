@@ -14,8 +14,20 @@ namespace EightQueensProblem
 
         public EightQueens() => solutions = new List<List<Point>>();
 
-        public List<List<Point>> Solutions() { return new List<List<Point>>(); }
-
+        public List<List<Point>> Solutions()
+        {
+            List<Point> solution = new List<Point>();
+            for (int row = 1; row <= 8; row++)
+            {
+                for (int col = 1; col <= 8; col++)
+                {
+                    solution = GetSolutionForPoint(new Point(row, col));
+                    if (solution.Count == 8)
+                        solutions.Add(solution);
+                }
+            }
+            return solutions;
+        }
         private List<Point> GetSolutionForPoint(Point new_point)
         {
             qeens_positioned = new List<Point>();
