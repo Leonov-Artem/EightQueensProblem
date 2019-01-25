@@ -9,6 +9,8 @@ namespace EightQueensProblem
 {
     partial class EightQueens : IEightQueens
     {
+        private List<List<Point>> solutions;
 
+        public EightQueens() => solutions = new List<List<Point>>();
     }
 }
