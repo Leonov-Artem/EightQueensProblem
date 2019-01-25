@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace EightQueensProblem
 {
-    class Program
+    class EightQueens
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
