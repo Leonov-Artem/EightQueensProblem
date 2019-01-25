@@ -19,13 +19,15 @@ namespace EightQueensProblem
         {
             foreach (var point in points)
             {
-                if (point.X == new_point.X || point.Y == new_point.Y 
-                                           || new_point.X + new_point.Y == point.X + point.Y
-                                           || new_point.X - new_point.Y == point.X - point.Y)
-                    return false;
+                if (point != new_point)
+                {
+                    if (point.X == new_point.X || point.Y == new_point.Y
+                                               || new_point.X + new_point.Y == point.X + point.Y
+                                               || new_point.X - new_point.Y == point.X - point.Y)
+                        return false;
+                }
             }
             return true;
         }
-
     }
 }

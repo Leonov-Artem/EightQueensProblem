@@ -9,7 +9,6 @@ namespace EightQueensProblem
 {
     interface IEightQueens
     {
-        int AmountSolutions();
         List<List<Point>> Solutions();
     }
 }
