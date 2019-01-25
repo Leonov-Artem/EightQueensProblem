@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace EightQueensProblem
 {
-    class EightQueens : IEightQueens
+    class EightQueensAdditions
     {
-
     }
 }
